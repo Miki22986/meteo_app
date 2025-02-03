@@ -5,5 +5,41 @@
  .container {
     max-width: 700px;
     margin: auto;
-    background-color: lightblue;
+    background: linear-gradient(360deg, rgb(232, 232, 249) 30%, rgb(11, 11, 242) 70%);
+    border-radius: 20px;
+    padding: 15px 25px;
+ }
+/*header*/
+input{
+    margin: 5px;
+    border-radius: 10px;
+    height: 40px;
+    border-color: white;
+ }
+ #search{
+    width: 75%;
+ }
+ #but_search{
+    width: 20%;
+    background-color: rgb(179, 118, 236);
+    font-size: 25px;
+    font-weight: bold;
+    color: #ffffff;
+ }
+/*main*/
+ h1{
+    color: white;
+    text-align: center;
+ }
+ .dati{
+    background-color: rgba(255, 255, 255, 0.7);
+    height: 150px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+ }
+ .meteo_giorni{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
  }
