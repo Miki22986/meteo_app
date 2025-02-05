@@ -3,38 +3,48 @@
     box-sizing: border-box;
 }
  .container {
-    max-width: 700px;
-    margin: auto;
-    background: linear-gradient(360deg, rgb(232, 232, 249) 30%, rgb(11, 11, 242) 70%);
-    border-radius: 20px;
-    padding: 15px 25px;
+   max-width: 700px;
+   margin: auto;
+   border-radius: 20px;
+   padding: 15px 45px;
+   background-image: url("../img/jessezhou-Uvaz_nuvoloso.jpg");
+   background-size: cover;
+   box-shadow: 0 30px 50px rgba(65, 50, 100, 0.08);
  }
 /*header*/
+
 input{
-    margin: 5px;
     border-radius: 10px;
     height: 40px;
-    border-color: white;
+    border:none;
  }
- #search{
+#city_src{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+#search{
     width: 75%;
  }
- #but_search{
-    width: 20%;
-    background-color: rgb(179, 118, 236);
-    font-size: 25px;
-    font-weight: bold;
-    color: #ffffff;
+#but_search{
+   background-color: rgb(179, 118, 236);
+   font-size: 20px;
+   font-weight: bold;
+   color: #ffffff;
+   padding: 10px;
+   line-height: 1; 
+   margin-left: 10px;
  }
 /*main*/
  h1{
     color: white;
     text-align: center;
  }
- .dati{
-    background-color: rgba(255, 255, 255, 0.7);
+ #dati{
+    background-color: rgba(255, 255, 255, 0.8);
     height: 150px;
     border-radius: 15px;
+    padding: 20px;
     display: flex;
     justify-content: space-between;
  }
