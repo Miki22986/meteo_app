@@ -42,16 +42,10 @@ main{
  h1{
     color: white;
     text-align: center;
+    font-size: 50px;
+    margin-bottom: 5px;
  }
- #dati{
-    background-color: rgba(255, 255, 255, 0.8);
-    height: 150px;
-    border-radius: 15px;
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
- }
- .meteo_giorni{
+  .meteo_giorni{
     border-radius: 15px 15px 0 0;
     margin-top: 20px;
     display: flex;
@@ -65,14 +59,38 @@ main{
    flex-direction: column;
    align-items: center;
  }
-
+ .temperature{
+   display: flex;
+}
+ #current-details{
+   font-size: 20px;
+ }
+#dati{
+    background-color: rgba(255, 255, 255, 0.8);
+    height: 150px;
+    border-radius: 15px;
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+ }
+ #temp_numb{
+   font-size: 80px;
+   font-weight: bold;
+   line-height: 80px;
+ }
+#icon{
+   font-size: 60px;
+}
+#gradi{
+   font-size: 20px;
+}
+ /*footer*/
  footer{
    background-color: white;
    text-align: center;
-   padding-bottom: 5px;
    border-radius: 0 0 10px 10px;
    margin-top: 0;
-    padding: 5px 20px;
+   padding: 5px 20px;
  }
  .giorno{
    display: flex;
