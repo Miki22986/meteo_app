@@ -1,14 +1,16 @@
-   let apiKey = "8bb47a1aat7f98e60875f1b93o1d6a06";
-   let apiURL = `https://api.shecodes.io/weather/v1/current?query=${searchInput.value}&key=${apiKey}`;
-//   axios.get(apiURL).then(show_temperature);
 
-//   function show_temperature(response) {
-//     let temp = Math.round(response.data.temperature.current);
-//     let temperature_where = document.querySelector(
-//       ".current-temperature-value"
-//     );
-//     temperature_where.innerHTML = temp;
-//   }
+function show_temperature(response) {
+    let temp = Math.round(response.data.temperature.current);
+    alert("temp");
+    //let temperature = document.querySelector("#temp_numb");
+    //temperature.innerHTML = temp;
+  }
+
+function search_city(city){
+    let apiKey = "8bb47a1aat7f98e60875f1b93o1d6a06";
+    let apiURL = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}`;
+    axios.get(apiURL).then(show_temperature);
+}
 
 function search(event) {
     event.preventDefault();
