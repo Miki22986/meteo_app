@@ -1,13 +1,15 @@
-function show_temperature(response){
+
+function show_weather(response){
   let temperature = document.querySelector("#temp_numb");
   let temp = Math.round(response.data.temperature.current);
   temperature.innerHTML = temp;
-}
+} 
 
 function search_city(city){
     let apiKey = "8bb47a1aat7f98e60875f1b93o1d6a06";
     let apiURL = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}`;
-    axios.get(apiURL).then(show_temperature);
+    axios.get(apiURL).then(show_weather);
+    
 }
 
 function search(event) {
