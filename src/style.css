@@ -25,6 +25,8 @@ input{
 }
 #search{
     width: 75%;
+    padding: 5px;
+    font-size: 18px;
  }
 #but_search{
    background-color: rgb(179, 118, 236);

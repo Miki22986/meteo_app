@@ -1,4 +1,11 @@
 
+function search(event) {
+    event.preventDefault();
+    let searchInput = document.querySelector("#search");
+    let cityElement = document.querySelector("#city");
+    cityElement.innerHTML = searchInput.value;
+}
+
 function show_temperature(response) {
     let temp = Math.round(response.data.temperature.current);
     alert("temp");
@@ -12,12 +19,7 @@ function search_city(city){
     axios.get(apiURL).then(show_temperature);
 }
 
-function search(event) {
-    event.preventDefault();
-    let searchInput = document.querySelector("#search");
-    let cityElement = document.querySelector("#city");
-    cityElement.innerHTML = searchInput.value;
-}
+
 /*Per la data*/
 function formatDate(date) {
   let minutes = date.getMinutes();
