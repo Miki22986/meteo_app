@@ -2,7 +2,16 @@
 function show_weather(response){
   let temperature = document.querySelector("#temp_numb");
   let temp = Math.round(response.data.temperature.current);
+  let nameCity = document.querySelector("#city");
+  let desWeather = document.querySelector("#description");
+  let humidity = document.querySelector("#humidity");
+  let wind = document.querySelector("#wind");
+
+  nameCity.innerHTML = response.data.city;
   temperature.innerHTML = temp;
+  desWeather.innerHTML= response.data.condition.description;
+  humidity.innerHTML= response.data.temperature.humidity +"%";
+  wind.innerHTML = `${response.data.wind.speed}km/h`;
 } 
 
 function search_city(city){
@@ -15,8 +24,7 @@ function search_city(city){
 function search(event) {
   event.preventDefault();
   let searchCity = document.querySelector("#search");
-  let nameCity = document.querySelector("#city");
-  nameCity.innerHTML = searchCity.value;
+
   search_city(searchCity.value);
 }
 
