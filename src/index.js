@@ -8,7 +8,7 @@ function show_weather(response){
   let wind = document.querySelector("#wind");
   let date = new Date(response.data.time * 1000);
   let time = document.querySelector("#data");
-
+  let icon = document.querySelector("#icon");
 
   nameCity.innerHTML = response.data.city;
   temperature.innerHTML = temp;
@@ -16,6 +16,7 @@ function show_weather(response){
   humidity.innerHTML= response.data.temperature.humidity +"%";
   wind.innerHTML = `${response.data.wind.speed}km/h`;
   time.innerHTML = formatDate(date);
+  iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="weather-app-icon" />`;
 } 
 
 function search_city(city){
