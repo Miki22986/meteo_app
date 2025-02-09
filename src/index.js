@@ -6,12 +6,16 @@ function show_weather(response){
   let desWeather = document.querySelector("#description");
   let humidity = document.querySelector("#humidity");
   let wind = document.querySelector("#wind");
+  let date = new Date(response.data.time * 1000);
+  let time = document.querySelector("#data");
+
 
   nameCity.innerHTML = response.data.city;
   temperature.innerHTML = temp;
   desWeather.innerHTML= response.data.condition.description;
   humidity.innerHTML= response.data.temperature.humidity +"%";
   wind.innerHTML = `${response.data.wind.speed}km/h`;
+  time.innerHTML = formatDate(date);
 } 
 
 function search_city(city){
@@ -60,7 +64,3 @@ function formatDate(date) {
   let formattedDay = days[day];
   return `${formattedDay} ${mounth_day},  ${hours}:${minutes} `;
 }
-
-let currentDateELement = document.querySelector("#data");
-let currentDate = new Date();
-currentDateELement.innerHTML = formatDate(currentDate);
