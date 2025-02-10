@@ -33,7 +33,7 @@ input{
 }
 #search{
     width: 75%;
-    padding: 5px;
+    padding-left: 10px;
     font-size: 18px;
     border: 1px solid blueviolet;
  }
@@ -50,10 +50,11 @@ input{
 main{
    margin-bottom: 0;
 }
- h1{
+ h2{
     text-align: center;
     font-size: 50px;
     margin-bottom: 5px;
+    margin-top: 20px;
  }
   .meteo_giorni{
     border-radius: 15px 15px 0 0;
@@ -72,6 +73,11 @@ main{
  .temperature{
    display: flex;
 }
+.centro{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
  #current-details{
    font-size: 20px;
  }
@@ -88,9 +94,6 @@ main{
    font-weight: bold;
    line-height: 80px;
  }
-#icon{
-   font-size: 60px;
-}
 #gradi{
    font-size: 20px;
 }
