@@ -1,22 +1,26 @@
 
+function description_weathert(response){
+   let desWeather = document.querySelector("#description");
+  let humidity = document.querySelector("#humidity");
+  let wind = document.querySelector("#wind");
+  desWeather.innerHTML= response.data.condition.description;
+  humidity.innerHTML= response.data.temperature.humidity +"%";
+  wind.innerHTML = `${response.data.wind.speed}km/h`;
+}
+
 function show_weather(response){
   let temperature = document.querySelector("#temp_numb");
   let temp = Math.round(response.data.temperature.current);
   let nameCity = document.querySelector("#city");
-  let desWeather = document.querySelector("#description");
-  let humidity = document.querySelector("#humidity");
-  let wind = document.querySelector("#wind");
   let date = new Date(response.data.time * 1000);
   let time = document.querySelector("#data");
-  let icon = document.querySelector("#icon");
+  let iconElement = document.querySelector("#icon");
 
   nameCity.innerHTML = response.data.city;
   temperature.innerHTML = temp;
-  desWeather.innerHTML= response.data.condition.description;
-  humidity.innerHTML= response.data.temperature.humidity +"%";
-  wind.innerHTML = `${response.data.wind.speed}km/h`;
   time.innerHTML = formatDate(date);
-  iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="weather-app-icon" />`;
+  iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" id="icon" />`;
+  description_weathert(response); 
 } 
 
 function search_city(city){
