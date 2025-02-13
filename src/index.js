@@ -52,6 +52,7 @@ function search(event) {
 let searchForm = document.querySelector("#city_src");
 searchForm.addEventListener("submit", search);
 
+search_city("Uzzano");
 /*Per la data*/
 function formatDate(date) {
   let minutes = date.getMinutes();
