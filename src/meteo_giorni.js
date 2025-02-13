@@ -10,7 +10,7 @@ let myHTML = `
 let content = ""; 
 
 for (let i = 0; i < 5; i++) { 
-    content += myHTML; // Aggiunge il codice HTML 5 volte
+    content += myHTML; 
 }
 
 weather_days.innerHTML = content;
