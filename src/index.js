@@ -35,6 +35,7 @@ function show_weather(response){
   show_temperature(response);
   show_time(response);
   show_icon(response);
+  get_Forecast(response.data.city);
 } 
 
 function search_city(city){
