@@ -1,6 +1,7 @@
 function show_city(response){
   let nameCity = document.querySelector("#city");
   nameCity.innerHTML = response.data.city;
+  console.log(response);
 }
 
 function show_temperature(response){
@@ -14,25 +15,9 @@ function description_weathert(response){
   let humidity = document.querySelector("#humidity");
   let wind = document.querySelector("#wind");
   let description = response.data.condition.description
-  let background = document.querySelector(".container");
   desWeather.innerHTML= description;
   humidity.innerHTML= response.data.temperature.humidity +"%";
   wind.innerHTML = `${response.data.wind.speed}km/h`;
-
-
-  if(description == "scattered clouds"){  
-    background.classList.add("nuvoloso");
-  }
-  // if (description =="clear sky "){
-  //   background.classList.add("soleggiato");
-  // }
-  if (description =="clear sky"){
-    background.classList.remove("nuvoloso"); 
-    background.classList.add("notte");
-  }
-  if(description == " rain ") {
-    background.classList.add("temporale");
-  }
 }
 
 function show_time(response){
@@ -41,9 +26,10 @@ function show_time(response){
   time.innerHTML = formatDate(date);
 }
 
-function show_icon(response){
+function show_icon(response){  
   let iconElement = document.querySelector("#icon");
   iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" id="icon" />`;
+    
 }
 
 function show_weather(response){ 
@@ -53,6 +39,7 @@ function show_weather(response){
   show_time(response);
   show_icon(response);
   get_Forecast(response.data.city);
+   change_backgound (response);
 } 
 
 function search_city(city){
