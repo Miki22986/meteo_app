@@ -13,18 +13,22 @@
    box-shadow: 0 30px 50px rgba(0, 0, 0, 0.5);
  }
 
-.nuvoloso{
-  background-image: url("../img/jessezhou-Uvaz_nuvoloso.jpg"); 
- }
- .soleggiato{
- background-image: url("../img/ryan-spencer-soleggiato.jpg");
-}   
-.temporale {
-  background-image: url("../img/david-moum-temporale.jpg");
-}
-.notte{
-  background-image: url("../img/cielo_notturno.jpg");
-}
+  .nuvoloso{
+    background-image: url("../img/jessezhou-Uvaz_nuvoloso.jpg"); 
+  }
+  .soleggiato{
+  background-image: url("../img/ryan-spencer-soleggiato.jpg");
+  }   
+  .temporale {
+    background-image: url("../img/david-moum-temporale.jpg");
+  }
+  .notte{
+    background-image: url("../img/cielo_notturno.jpg");
+  }
+  .bianco{
+    color: white;
+  }
+
 /*header*/
 
 input{
