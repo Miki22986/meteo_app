@@ -13,7 +13,6 @@ function get_Forecast(city) {
 
 
 function displayForecast(response){
-   console.log(response.data);
   let forecastHtml = "";
 
   response.data.daily.forEach(function (day, index) {//chiedi a chat

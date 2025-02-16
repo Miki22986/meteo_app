@@ -13,9 +13,26 @@ function description_weathert(response){
   let desWeather = document.querySelector("#description");
   let humidity = document.querySelector("#humidity");
   let wind = document.querySelector("#wind");
-  desWeather.innerHTML= response.data.condition.description;
+  let description = response.data.condition.description
+  let background = document.querySelector(".container");
+  desWeather.innerHTML= description;
   humidity.innerHTML= response.data.temperature.humidity +"%";
   wind.innerHTML = `${response.data.wind.speed}km/h`;
+
+
+  if(description == "scattered clouds"){  
+    background.classList.add("nuvoloso");
+  }
+  // if (description =="clear sky "){
+  //   background.classList.add("soleggiato");
+  // }
+  if (description =="clear sky"){
+    background.classList.remove("nuvoloso"); 
+    background.classList.add("notte");
+  }
+  if(description == " rain ") {
+    background.classList.add("temporale");
+  }
 }
 
 function show_time(response){

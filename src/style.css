@@ -14,12 +14,17 @@
  }
 
 .nuvoloso{
-    background-image: url("../img/jessezhou-Uvaz_nuvoloso.jpg"); 
+  background-image: url("../img/jessezhou-Uvaz_nuvoloso.jpg"); 
  }
  .soleggiato{
  background-image: url("../img/ryan-spencer-soleggiato.jpg");
 }   
-
+.temporale {
+  background-image: url("../img/david-moum-temporale.jpg");
+}
+.notte{
+  background-image: url("../img/cielo_notturno.jpg");
+}
 /*header*/
 
 input{
