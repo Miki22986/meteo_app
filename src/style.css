@@ -25,6 +25,12 @@
   .notte{
     background-image: url("../img/cielo_notturno.jpg");
   }
+  .neve{
+    background-image: url("../img/neve.jpg");
+  }
+  .nebbia{
+    background-color: url("../img/annie-spratt-nebbia.jpg");
+  }
   .bianco{
     color: white;
   }
