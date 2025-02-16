@@ -1,5 +1,5 @@
 function selectedDays (giorni){
-  let days = ["Dom", "Lun", "Mar", "Merc", "Giov", "Ven", "Sab"];
+  let days = ["Domenica", "Lunedi", "Martedi", "Mercoledi", "Giovedi", "Venerdi", "Sabato"];
   let date = new Date(giorni * 1000);
 
   return days[date.getDay()];
@@ -19,12 +19,12 @@ function displayForecast(response){
     if (index < 5) {
       forecastHtml =
         forecastHtml +
-        ` <div class="giorno"> ${selectedDays(day.time)} 
-          <img src="${day.condition.icon_url}" class ="emoji_day">
-          <div class="max_min">
-              ${Math.round(day.temperature.maximum)}°  
-            <span id ="low_temp"> ${Math.round(day.temperature.minimum)} °</span>
-          </div> 
+        ` <div class="giorno"> <b id="day"> ${selectedDays(day.time)} </b>
+            <img src="${day.condition.icon_url}" class ="emoji_day">
+            <div class="max_min"> 
+              <b id="high_temp"> ${Math.round(day.temperature.maximum)}° </b> 
+              <span id ="low_temp"> ${Math.round(day.temperature.minimum)} °</span>
+            </div> 
           </div>`;
     }
   });

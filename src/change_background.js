@@ -20,6 +20,5 @@ if(condition.includes("rain") && condition.includes("thunderstorm")) {
     background.className = "container temporale";
     title.classList.add("bianco");
 }
-
 }
 
