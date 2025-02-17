@@ -25,12 +25,6 @@
   .notte{
     background-image: url("../img/cielo_notturno.jpg");
   }
-  .neve{
-    background-image: url("../img/neve.jpg");
-  }
-  .nebbia{
-    background-color: url("../img/annie-spratt-nebbia.jpg");
-  }
   .bianco{
     color: white;
   }
@@ -42,18 +36,14 @@ input{
     height: 40px;
     border:none;
  }
-#city_src{
-   display: flex;
-   align-items: center;
-   justify-content: center;
-}
 #search{
-    width: 75%;
+    width: 100%;
     padding-left: 10px;
     font-size: 18px;
     border: 1px solid rgb(60, 10, 100);
  }
 #but_search{
+  width: 100%;
    background-color: rgb(60, 10, 100);
    font-size: 20px;
    font-weight: bold;
@@ -77,7 +67,7 @@ main{
     margin-top: 20px;
     display: flex;
     justify-content: space-around;
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(255, 255, 255, 0.7);
     padding: 5px 20px;
  }
  .giorno{
@@ -86,29 +76,31 @@ main{
    flex-direction: column;
    align-items: center;
  }
+ .emoji_day{
+   margin: 10px;
+ }
  .temperature{
    display: flex;
 }
-.centro{
-   display: flex;
-   justify-content: center;
-   align-items: center;
-}
-#current-details{
+ #current-details{
    font-size: 20px;
  }
 #dati{
-    background-color: rgba(255, 255, 255, 0.5);
-    height: 150px;
+    background-color: rgba(255, 255, 255, 0.7);
+    height: auto;
     border-radius: 15px;
     padding: 30px;
     display: flex;
     justify-content: space-between;
  }
+ #icon{
+  display: block;
+  width: 120px;
+ }
  #temp_numb{
-   font-size: 80px;
+   font-size: 90px;
    font-weight: bold;
-   line-height: 80px;
+   line-height: 110px;
  }
 #gradi{
    font-size: 20px;
@@ -119,9 +111,9 @@ main{
 #high_temp, #day{
   color: rgb(60, 10, 100);
 }
-/*footer*/
+ /*footer*/
 footer{
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(255, 255, 255, 0.7);
   text-align: center;
   border-radius: 0 0 10px 10px;
   margin-top: 0px;
