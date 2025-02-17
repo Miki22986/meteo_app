@@ -15,11 +15,11 @@ function get_Forecast(city) {
 function displayForecast(response){
   let forecastHtml = "";
 
-  response.data.daily.forEach(function (day, index) {//chiedi a chat
+response.data.daily.forEach(function (day, index) {//chiedi a chat
     if (index < 5) {
       forecastHtml =
         forecastHtml +
-        ` <div class="giorno"> <b id="day"> ${selectedDays(day.time)} </b>
+        ` <div class="giorno col-lg-2"> <b id="day"> ${selectedDays(day.time)} </b>
             <img src="${day.condition.icon_url}" class ="emoji_day">
             <div class="max_min"> 
               <b id="high_temp"> ${Math.round(day.temperature.maximum)}° </b> 
